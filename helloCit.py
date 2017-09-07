@@ -14,7 +14,7 @@ def index():
 	return "Welcome"
 	
 
-@app.route("/login)
+@app.route("/login")
 def login (uname,passwd):
 	conn=sqlite3.connect('app.db')
 	cur=conn.execute('select username,password from Users where name='%s'" %uname)
